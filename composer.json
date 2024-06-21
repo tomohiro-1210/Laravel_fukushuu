@@ -1,0 +1,11 @@
+{
+    "name": "hoshi/composer_test",
+    "autoload": {
+        "psr-4": {
+            "Src\\": "src/"
+        }
+    },
+    "require": {
+        "nesbot/carbon": "^3.5"
+    }
+}
