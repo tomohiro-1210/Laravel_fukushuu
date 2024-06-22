@@ -1,6 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\TestController;
+use App\Http\Controllers\Database2Controller;
 
 /*
 |--------------------------------------------------------------------------
@@ -12,6 +14,18 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
+
+
+Route::get('tests/test', [TestController::class, 'index']);
+
+// Route::resource('databases', Database2Controller::class); //一行ずつ書いていく例
+Route::prefix('databases') //複数のものを１つのグループにまとめる
+->middleware(['auth']) // 認証(ログインしたときに見ることができるようにする)
+->controller(Database2Controller::class)
+->name('databases.')
+->group(function(){
+    Route::get('/', 'index')->name('index');
+});
 
 Route::get('/', function () {
     return view('welcome');
