@@ -11,9 +11,10 @@ class StoreDatabaseRequest extends FormRequest
      *
      * @return bool
      */
+    // バリテーションが発動するかしないかを切り替える
     public function authorize()
     {
-        return false;
+        return true;
     }
 
     /**
@@ -24,7 +25,13 @@ class StoreDatabaseRequest extends FormRequest
     public function rules()
     {
         return [
-            //
+            'name' => ['required', 'string', 'max:20'],
+            'title' => ['required', 'string', 'max:50'],
+            'email' => ['required', 'string', 'max:255'],
+            'gender' => ['required', 'boolean'],
+            'age' => ['required'],
+            'message' => ['required', 'string', 'max:200'],
+            'caution' => ['required'],
         ];
     }
 }

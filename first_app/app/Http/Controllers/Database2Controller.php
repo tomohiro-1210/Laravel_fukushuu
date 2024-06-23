@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Database;
 use App\Services\DatabaseService;
+use App\Http\Requests\StoreDatabaseRequest;
 
 
 class Database2Controller extends Controller
@@ -39,7 +40,7 @@ class Database2Controller extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(StoreDatabaseRequest $request)
     {
         // dd($request);
         
