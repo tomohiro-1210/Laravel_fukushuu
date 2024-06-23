@@ -22,35 +22,35 @@
                                 <!-- 名前 -->
                                 <div class="p-2 w-full">
                                     <div class="relative">
-                                        <label for="name" class="leading-7 text-sm text-gray-600">お名前</label>
+                                        <label for="name" class="leading-7 text-sm text-gray-600">お名前<span class="text-white bg-red-500 border-0 py-1 px-4 ml-2">必須</span></label>
                                         <input type="text" id="name" name="name" class="w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
                                     </div>
                                 </div>
                                 <!-- 件名 -->
                                 <div class="p-2 w-full">
                                     <div class="relative">
-                                        <label for="title" class="leading-7 text-sm text-gray-600">件名</label>
+                                        <label for="title" class="leading-7 text-sm text-gray-600">件名<span class="text-white bg-red-500 border-0 py-1 px-4 ml-2">必須</span></label>
                                         <input type="text" id="title" name="title" class="w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
                                     </div>
                                 </div>
                                 <!-- メール -->
                                 <div class="p-2 w-full">
                                     <div class="relative">
-                                        <label for="email" class="leading-7 text-sm text-gray-600">メール</label>
+                                        <label for="email" class="leading-7 text-sm text-gray-600">メール<span class="text-white bg-red-500 border-0 py-1 px-4 ml-2">必須</span></label>
                                         <input type="email" id="email" name="email" class="w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
                                     </div>
                                 </div>
                                 <!-- リンク -->
                                 <div class="p-2 w-full">
                                     <div class="relative">
-                                        <label for="url" class="leading-7 text-sm text-gray-600">リンク</label>
+                                        <label for="url" class="leading-7 text-sm text-gray-600">リンク<span class="text-white bg-red-500 border-0 py-1 px-4 ml-2">必須</span></label>
                                         <input type="url" id="url" name="url" class="w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
                                     </div>
                                 </div>
                                 <!-- 性別 -->
                                 <div class="p-2 w-full">
                                     <div class="relative">
-                                        <label for="name" class="leading-7 text-sm text-gray-600">性別</label><br>
+                                        <label for="name" class="leading-7 text-sm text-gray-600">性別<span class="text-white bg-red-500 border-0 py-1 px-4 ml-2">必須</span></label><br>
                                         <input type="radio" id="gender" name="gender" value="0"><span class="ml-2 mr-4">男性</span>
                                         <input type="radio" id="gender" name="gender" value="1"><span class="ml-2">女性</span>
                                     </div>
@@ -58,7 +58,7 @@
                                 <!-- 年齢 -->
                                 <div class="p-2 w-full">
                                     <div class="relative">
-                                        <label for="name" class="leading-7 text-sm text-gray-600">年齢</label><br>
+                                        <label for="name" class="leading-7 text-sm text-gray-600">年齢<span class="text-white bg-red-500 border-0 py-1 px-4 ml-2">必須</span></label><br>
                                         <select name="age" class="w-full bg-gray-100 bg-opacity-50 border-gray-300 border-20">
                                             <option value="">選択してください</option>
                                             <option value="1">～19歳</option>
@@ -73,7 +73,7 @@
                                 <!-- 書きたいこと -->
                                 <div class="p-2 w-full">
                                     <div class="relative">
-                                        <label for="message" class="leading-7 text-sm text-gray-600">書きたいこと</label>
+                                        <label for="message" class="leading-7 text-sm text-gray-600 mb-2">書きたいこと<span class="text-white bg-red-500 border-0 py-1 px-4 ml-2">必須</span></label>
                                         <textarea id="message" name="message" class="w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-200 h-32 text-base outline-none text-gray-700 py-1 px-3 resize-none leading-6 transition-colors duration-200 ease-in-out"></textarea>
                                     </div>
                                 </div>

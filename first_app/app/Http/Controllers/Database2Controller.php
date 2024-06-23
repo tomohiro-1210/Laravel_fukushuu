@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Database;
+use App\Services\DatabaseService;
+
 
 class Database2Controller extends Controller
 {
@@ -14,7 +16,11 @@ class Database2Controller extends Controller
      */
     public function index()
     {
-        return view('databases.index');
+        $databases = Database::select('id', 'name', 'title', 'created_at')->get();
+
+        return view('databases.index', compact('databases'));
+
+
     }
 
     /**
@@ -58,7 +64,15 @@ class Database2Controller extends Controller
      */
     public function show($id)
     {
-        //
+        $database = Database::find($id);
+
+        // 性別
+        $gender = DatabaseService::checkGender($database);
+        
+        // 年齢層
+        $age = DatabaseService::checkAge($database);
+
+        return view('databases.show', compact('database', 'gender', 'age'));
     }
 
     /**
@@ -69,7 +83,8 @@ class Database2Controller extends Controller
      */
     public function edit($id)
     {
-        //
+        $database = Database::find($id);
+        return view('databases.edit', compact('database'));
     }
 
     /**
@@ -81,7 +96,16 @@ class Database2Controller extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $database = Database::find($id);
+        $database->name = $request->name;
+        $database->title = $request->title;
+        $database->email = $request->email;
+        $database->url = $request->url;
+        $database->gender = $request->gender;
+        $database->age = $request->age;
+        $database->message = $request->message;
+        $database->save();
+        return to_route('databases.index');
     }
 
     /**
@@ -92,6 +116,10 @@ class Database2Controller extends Controller
      */
     public function destroy($id)
     {
-        //
+        $database = Database::find($id);
+
+        $database->delete();
+
+        return to_route('databases.index');
     }
 }
