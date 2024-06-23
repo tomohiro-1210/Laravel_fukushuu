@@ -15,6 +15,12 @@
                         <div class="container px-1 py-24 mx-auto">
                             <div class="flex flex-col text-center w-full mb-2">
                             <h1 class="sm:text-4xl text-3xl font-medium title-fonttext-gray-900">Database一覧</h1></div>
+                            <form method="get" action="{{ route('databases.index') }}">
+                                <div class="mt-2 mb-2">
+                                    <input type="text" name="search" placeholder="検索する" class="w-1/2 mx-auto block my-2">
+                                    <button class="flex mx-auto text-white bg-indigo-500 border-0 py-2 px-8 focus:outline-none hover:bg-indigo-600 rounded text-lg">検索する</button>
+                                </div>
+                            </form>
                             <div class="lg:w-2/3 w-full mx-auto overflow-auto">
                             <table class="table-auto w-full text-left whitespace-no-wrap">
                                 <thead>
@@ -40,6 +46,7 @@
                                 </tbody>
                             </table>
                             </div>
+                            <div class="mt-6">{{ $databases->links() }}</div>
                         </div>
                         </section>
                 </div>

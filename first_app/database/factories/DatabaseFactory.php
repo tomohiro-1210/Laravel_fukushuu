@@ -17,7 +17,13 @@ class DatabaseFactory extends Factory
     public function definition()
     {
         return [
-            //
+            'name' => $this->faker->name(20),
+            'title' => $this->faker->realText(50),
+            'email' => $this->faker->email(),
+            'url' => $this->faker->url(),
+            'gender' => $this->faker->boolean(),
+            'age' => $this->faker->numberBetween(1,6),
+            'message' => $this->faker->realText(200),
         ];
     }
 }
