@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Database;
 
 class Database2Controller extends Controller
 {
@@ -23,7 +24,7 @@ class Database2Controller extends Controller
      */
     public function create()
     {
-        //
+        return view('databases.create');
     }
 
     /**
@@ -34,7 +35,19 @@ class Database2Controller extends Controller
      */
     public function store(Request $request)
     {
-        //
+        // dd($request);
+        
+        Database::create([
+            'name' => $request->name,
+            'title' => $request->title,
+            'email' => $request->email,
+            'url' => $request->url,
+            'gender' => $request->gender,
+            'age' => $request->age,
+            'message' => $request->message,
+        ]);
+        // 保存したらどこのページに飛ばすか
+        return to_route('databases.index');
     }
 
     /**

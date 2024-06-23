@@ -25,6 +25,8 @@ Route::prefix('databases') //複数のものを１つのグループにまとめ
 ->name('databases.')
 ->group(function(){
     Route::get('/', 'index')->name('index');
+    Route::get('/create', 'create')->name('create');
+    Route::post('/', 'store')->name('store');
 });
 
 Route::get('/', function () {
